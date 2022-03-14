@@ -1,5 +1,6 @@
 # secret-page
-Super Duper Secret Page to deploy at [Heroku](https://www.heroku.com/)
+Super Duper Secret Page to deploy at [Heroku](https://www.heroku.com/).
+Uses Basic Authentication to restrict access.
 
 Based on https://github.com/nulltask/heroku-static-provider
 
