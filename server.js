@@ -1,15 +1,22 @@
-var express = require('express');
-var logger = require('morgan');
-var compression = require('compression');
-var app = express();
+const express = require('express');
+const logger = require('morgan');
+const compression = require('compression');
+const basicAuth = require('express-basic-auth')
 
-var user = process.env.USER;
-var pass = process.env.PASS;
+const app = express();
+const user = process.env.USER;
+const pass = process.env.PASS;
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5000);
 
 if (user && pass) {
-  app.use(express.basicAuth(user, pass));
+  console.info('enable basic auth')
+  app.use(basicAuth({
+    users: { [user]: pass },
+    challenge: true
+  }));
+} else {
+  console.warn('no credentials given. disabling authentification');
 }
 
 app.use(logger('dev'));
