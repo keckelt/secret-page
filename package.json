@@ -8,9 +8,12 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.3",
-    "morgan": "1.^10.0"
+    "morgan": "1.10.0"
   },
   "devDependencies": {
     "foreman": "~2.0.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
