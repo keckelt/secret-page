@@ -1,54 +1,35 @@
 # secret-page
-Super Duper  Secret Stuff
+Super Duper Secret Page to deploy at [Heroku](https://www.heroku.com/)
 
 Based on https://github.com/nulltask/heroku-static-provider
 
-## Installation
+## Deploy on Heroku
 
-You need sign-in or sign-up to Heroku.
-
-    $ git clone git@github.com:keckelt/secret-page.git
-    $ cd secret-page
-    $ heroku create
-    $ git push -u heroku master
-    $ heroku open
+* You need sign-in or sign-up to Heroku.
+* Create a new app and give it a name
+* Connect new app to this repository
+* deploy the `main` branch manually, enable automatic deploys
 
 ## Development
 
-0. Install packages.
+1. Install packages.
 
     ```sh
     $ npm install
     ```
 
-0. Add or update files in `/public`.
-0. Run on the local machine.
+2. Add or update files in `/public`.
+3. Run on the local machine.
 
     ```bash
     $ npm start
     ```
 
-0. Check on browser.
+4. Check on browser.
   - http://localhost:5000
 
-## Deployment
+5. Push changes to Github, page will be automatically redeployed
 
-    $ git add .
-    $ git commit -a -m 'some commit message'
-    $ git push heroku master
-    $ heroku open
+## Adding Basic Auth
 
-## Notes
-
-### Adding Basic Auth
-
-	$ heroku config:set USER=username
-	$ heroku config:set PASS=password
-
-### Screencast
-
-  * https://vimeo.com/71315109
-
-## License
-
-MIT
+For the real secretiveness, set `USER` and `PASS` config vars in the settings of the Heroku App
